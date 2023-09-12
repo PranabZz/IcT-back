@@ -14,8 +14,7 @@ const auth = (req: Request, res: Response, next: NextFunction) => {
     if (err) {
       console.error('JWT verification error:', err);
       return res.sendStatus(401);
-    } else{
-      //req.body.username = response.username;
+    } else{ 
       next();
     } 
   });
